@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #111827;
+  font-family: 'Courier New', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 222, 128, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(74, 222, 128, 0.7);
+}
+
+/* Custom Leaflet Marker Styles */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(17, 24, 39, 0.95) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 360px !important;
+  max-width: 360px !important;
+}
+
+.leaflet-popup-content {
+  margin: 8px !important;
+  width: auto !important;
+  min-height: 360px !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-container {
+  background: #1a1a1a !important;
+}
+
+/* Style pour les informations VPN */
+.vpn-info-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  min-height: 320px;
+}
+
+.vpn-info-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.vpn-info-value {
+  color: rgba(255, 255, 255, 0.9);
+  word-break: break-word;
+}
+
+.vpn-info-value.compromised {
+  color: rgb(248 113 113) !important;
+}
+
+/* Animations des lignes VPN */
+.vpn-line-compromised-1 {
+  animation: pulse-line-1 2s infinite;
+}
+
+.vpn-line-compromised-2 {
+  animation: pulse-line-2 2s infinite;
+}
+
+.vpn-line-active {
+  animation: pulse-line-active 3s infinite;
+}
+
+@keyframes pulse-line-1 {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-line-2 {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
