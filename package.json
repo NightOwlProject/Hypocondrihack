@@ -1,9 +1,11 @@
 {
-  "name": "neuroshield",
+  "name": "Hypocondrihack",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "main": "electron/main.js",
+  "description": "Un Antivirus, un peu trop hésitant",
+  "author": "Hackhathon 2025",
+  "main": "public/electron.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -35,7 +37,7 @@
     "autoprefixer": "^10.4.18",
     "concurrently": "^8.2.2",
     "electron": "^29.1.0",
-    "electron-builder": "^25.1.8",
+    "electron-builder": "^24.12.0",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
@@ -48,7 +50,7 @@
   },
   "build": {
     "appId": "com.neuroshield.app",
-    "productName": "NeuroShield",
+    "productName": "Hypocondrihack",
     "directories": {
       "output": "dist_electron"
     },
