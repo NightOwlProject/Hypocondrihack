@@ -24,9 +24,6 @@ const createWindow = () => {
       : `file://${path.join(__dirname, '../dist/index.html')}`
   );
 
-  if (isDev) {
-    mainWindow.webContents.openDevTools();
-  }
 };
 
 app.whenReady().then(createWindow);
